@@ -2,14 +2,20 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Employees</h1>
-  
-  <ul>
-    <% employees.forEach(employee => { %>
-      <li><a href="/medic-elite/employees/<%= employee.employeeID %>"><%= employee.name %></a></li>
-    <% }) %>
-  </ul>
-
+  <div class="container">
+    <div class="employee-list">
+        <h1>Employees</h1>
+        <ul>
+          <% employees.forEach(employee => { %>
+            <li><a href="/medic-elite/employees/<%= employee.employeeID %>"><%= employee.name %></a></li>
+          <% }) %>
+        </ul>
+    </div>
+    <div class="hq-image">
+        <h2>Corporate Headquarters - Boston, MA</h2>
+        <img src="/images/hq.jpg" alt="Company Headquarters">
+    </div>
+</div>
 </main>
 
 <%- include('partials/footer') %>
