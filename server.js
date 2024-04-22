@@ -9,36 +9,39 @@ const homeData = require('./homeData.js');
 const missionBriefings = require('./missionBriefings.js'); 
 const linksData = require('./linksData.js')
 
-app.get('/medic-elite', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home', {homeData});
 });
 
-app.get('/medic-elite/history', (req, res) => {
+app.get('/history', (req, res) => {
     res.render('history');
 });
 
-app.get('/medic-elite/missions', (req, res) => {
+app.get('/missions', (req, res) => {
     res.render('missions', { missionBriefings }); 
 });
 
-app.get('/medic-elite/missions-data', (req, res) => {
+app.get('/missions-data', (req, res) => {
     res.json(missionBriefings);
   });
 
-app.get('/medic-elite/employees', (req, res) => {
+app.get('/employees', (req, res) => {
     res.render('employees', {employees});
 });
 
-app.get('/medic-elite/contact', (req, res) => {
+app.get('/employees-data', (req, res) => {
+    res.json(employees);
+});
+
+app.get('/contact', (req, res) => {
     res.render('contact');
 });
 
-app.get('/medic-elite/links', (req, res) => {
-    res.render('links');
-    res.render('links.ejs', {linksData})
+app.get('/links', (req, res) => {
+    res.render('links', {linksData});
 });
 
-app.get('/medic-elite/employees/:employeeID', (req, res) => {
+app.get('/employees/:employeeID', (req, res) => {
     const employee = employees.find(employee => employee.employeeID === req.params.employeeID);
     res.render('employee', { employee });
 });

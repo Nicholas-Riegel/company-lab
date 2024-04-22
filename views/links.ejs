@@ -1,17 +1,18 @@
 <%- include('./partials/head') %>
 <%- include('./partials/nav') %>
 
-<div id="links">
-    
-    <h1>Links</h1>
-    
-    <% linksData.forEach(item => { %>
-        <div>
-            <h2><a href="<%= item.url %>"><%= item.title %></a></h2>
-            <p><%= item.description %></p>
+<div class="links-wrapper">
+  <div class="content-container">
+    <div id="links">
+      <h1>Strategic Partners</h1>
+      <% linksData.forEach(item => { %>
+        <div class="link-item">
+          <h2><a href="<%= item.url %>"><%= item.title %></a></h2>
+          <p><%= item.description %></p>
         </div>
-    <% }) %>
-        
+      <% }) %>
+    </div>
+  </div>
 </div>
 
 <%- include('./partials/footer') %>

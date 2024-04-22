@@ -1,12 +1,10 @@
 /* styles.css */
-
 /*Common Styles*/
 body,
 html {
     height: 100%;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
     box-sizing: border-box;
 }
 
@@ -49,57 +47,24 @@ footer {
     height: 2em;
 }
 
-/*Employee Styles*/
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: calc(100vh - 2em - 2em);
-    padding: 1em;
-}
-
-.employee-list {
-    width: 40%;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.hq-image {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.hq-image img {
-    max-width: 900px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
 /*Home Styles*/
 .home-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 100px); 
+    min-height: calc(100vh - 100px);
     padding: 20px;
-    background-image: url('/images/boston2065.jpg');
+    background-image: url("/images/boston2065.jpg");
     background-size: cover;
-  }
-  
-  .home-container {
+}
+
+.home-container {
     display: flex;
     align-items: stretch;
     gap: 20px;
-  }
-  
-  .logo-container {
+}
+
+.logo-container {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
@@ -109,16 +74,16 @@ footer {
     border-radius: 5px;
     background-color: lightgray;
     border: 2px solid #1d1c1c;
-  }
-  
-  .logo-container img {
+}
+
+.logo-container img {
     max-width: 800px;
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
-  }
-  
-  .content-container {
+}
+
+.content-container {
     flex: 0 1 auto;
     max-width: 1000px;
     padding: 20px;
@@ -126,76 +91,133 @@ footer {
     border-radius: 5px;
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact Styles */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+    background-image: url("/images/boston2065.jpg");
+    background-size: cover;
+  }
+  
+  .content-container {
+    padding: 20px;
+    border: 2px solid #1d1c1c;
+    border-radius: 5px;
+    background-color: lightgray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+    min-height: 500px;
+  }
+  
+  #contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact h1 {
+    text-align: center;
+  }
+  
+  #contact form > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contact textarea {
+    height: 150px; 
+  }
+  
+  #contact button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+  
+  #contact button:hover {
+    background-color: #2980b9;
   }
 
-/* Contact form  */
+/* Links Styles */
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+    background-image: url("/images/boston2065.jpg");
+    background-size: cover;
+  }
+  
+  .content-container {
+    padding: 20px;
+    border: 2px solid #1d1c1c;
+    border-radius: 5px;
+    background-color: lightgray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  #links {
+    width: 100%;
+  }
+  
+  #links h1 {
+    text-align: center;
+  }
+  
+  .link-item {
+    margin-bottom: 20px;
+  }
+  
+  #links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  #links a:hover {
+    text-decoration: underline;
+  }
 
-#contact {
-  margin: auto;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-#contact h1{
-  text-align: center;
-}
-
-#contact form > div {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#contact input, #contact textarea {
-  box-sizing: border-box;
-  width: 100%;
-}
-
-#contact button {
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#contact button:hover {
-  background-color: rgb(240, 111, 202);
-}
-
-/* Links  */
-
-#links {
-  margin: auto;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
-
-#links h1{
-  text-align: center;
-}
-
-#links > div {
-  margin-bottom: 10px;
-}
-
-
-  /*History Styles*/
+/*History Styles*/
 .history-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 100px);
     padding: 20px;
-    background-image: url('/images/boston2065.jpg');
+    background-image: url("/images/boston2065.jpg");
     background-size: cover;
-  }
-  
-  .history-container {
+}
+
+.history-container {
     display: flex;
     align-items: stretch;
     gap: 20px;
-  }
-  
-  .text-content {
+}
+
+.text-content {
     flex: 0 1 auto;
     max-width: 1000px;
     padding: 20px;
@@ -203,9 +225,9 @@ footer {
     border-radius: 5px;
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  }
-  
-  .history-image-container {
+}
+
+.history-image-container {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
@@ -215,14 +237,14 @@ footer {
     border-radius: 5px;
     background-color: lightgray;
     border: 2px solid #1d1c1c;
-  }
-  
-  .history-image-container img {
+}
+
+.history-image-container img {
     max-width: 800px;
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
-  }
+}
 /* Missions Styles */
 .missions-wrapper {
     display: flex;
@@ -230,18 +252,18 @@ footer {
     align-items: flex-start;
     min-height: calc(100vh - 100px);
     padding: 20px;
-    background-image: url('/images/boston2065.jpg');
+    background-image: url("/images/boston2065.jpg");
     background-size: cover;
-  }
-  
-  .missions-container {
+}
+
+.missions-container {
     display: flex;
     gap: 20px;
     width: 100%;
     max-width: 1400px;
-  }
-  
-  .mission-links {
+}
+
+.mission-links {
     flex: 0 0 30%;
     min-width: 300px;
     min-height: 500px;
@@ -251,9 +273,9 @@ footer {
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     overflow-y: auto;
-  }
-  
-  .mission-details {
+}
+
+.mission-details {
     flex: 1;
     min-width: 600px;
     min-height: 500px;
@@ -266,18 +288,158 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .mission-details p {
+}
+
+.mission-details p {
     text-align: center;
-  }
-  
-  .mission-details img {
+}
+
+.mission-details img {
     width: 100%;
     height: 600px;
     object-fit: cover;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+/*Employee Styles*/
+.employees-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+    background-image: url("/images/boston2065.jpg");
+    background-size: cover;
   }
-
+  
+  .employees-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 2200px;
+  }
+  
+  .employee-list,
+  .employee-details,
+  .hq-slideshow {
+    flex: 1;
+    min-width: 600px;
+    min-height: 1000px;
+    padding: 20px;
+    border: 2px solid #1d1c1c;
+    border-radius: 5px;
+    background-color: lightgray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+  }
+  
+  .employee-list h1,
+  .hq-slideshow h2 {
+    text-align: center;
+  }
+  
+  .employee-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .employee-list li {
+    margin-bottom: 10px;
+  }
+  
+  .employee-list a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .employee-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .employee-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .employee-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee-info img {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+  }
+  
+  .employee-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .employee-info li {
+    margin-bottom: 5px;
+  }
+  
+  .employee-link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .employee-link::before {
+    content: "\2022";
+    color: #007bff;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hq-slideshow {
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    max-width: 90%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .slide h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }

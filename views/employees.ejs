@@ -1,21 +1,40 @@
 <%- include('./partials/head', { pageTitle: 'Medic-Elite' }) %>
 <%- include('./partials/nav') %>
-
 <main>
-  <div class="container">
-    <div class="employee-list">
+  <div class="employees-wrapper">
+    <div class="employees-container">
+      <div class="employee-list">
         <h1>Employees</h1>
         <ul>
-          <% employees.forEach(employee => { %>
-            <li><a href="/medic-elite/employees/<%= employee.employeeID %>"><%= employee.name %></a></li>
+          <% employees.forEach((employee, index) => { %>
+          <ul>
+            <a href="#" class="employee-link" data-index="<%= index %>" onclick="loadEmployeeDetails(this); return false;"> <%= employee.name %> </a>
+          </ul>
           <% }) %>
         </ul>
+      </div>
+      <div id="employeeDetails" class="employee-details">
+        <p>Select an employee to view details.</p>
+      </div>
+      <div class="hq-slideshow">
+        <div class="slide">
+          <h2>Corporate Headquarters - Boston, MA</h2>
+          <img src="/images/hq1.jpg" alt="Company Headquarters 1">
+        </div>
+        <div class="slide">
+          <h2>R & D 6th Floor</h2>
+          <img src="/images/hq2.png" alt="Company Headquarters 2">
+        </div>
+        <div class="slide">
+          <h2>MERT Mobile Hospital</h2>
+          <img src="/images/hq3.jpg" alt="Company Headquarters 3">
+        </div>
+        <div class="slide">
+          <h2>Medic Elite Call Center - 12th floor</h2>
+          <img src="/images/hq4.jpg" alt="Company Headquarters 4">
+        </div>
+      </div>
     </div>
-    <div class="hq-image">
-        <h2>Corporate Headquarters - Boston, MA</h2>
-        <img src="/images/hq.jpg" alt="Company Headquarters">
-    </div>
-</div>
+  </div>
 </main>
-
 <%- include('partials/footer') %>
