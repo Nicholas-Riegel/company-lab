@@ -1,12 +1,12 @@
-<%- include('partials/head', { pageTitle: 'Medic-Elite' }) %>
-<%- include('partials/nav') %>
+<%- include('./partials/header', { pageTitle: 'Medic-Elite' }) %>
+<%- include('./partials/nav') %>
 
 <main>
   <h1>Employees</h1>
   
   <ul>
-    <% members.forEach(employee => { %>
-      <li><a href="/emplyees/<%= employee.employeeID %>"><%= employee.name %></a></li>
+    <% employees.forEach(employee => { %>
+      <li><a href="employees/<%= employee.employeeID %>"><%= employee.name %></a></li>
     <% }) %>
   </ul>
 

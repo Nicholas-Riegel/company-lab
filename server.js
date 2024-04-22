@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const employees = require('./employees.js');
+
 app.get('/medic-elite', (req, res) => {
     res.render('home.ejs')
 });
@@ -11,7 +13,7 @@ app.get('/medic-elite/work', (req, res) => {
     res.render('work.ejs')
 });
 app.get('/medic-elite/employees', (req, res) => {
-    res.render('employees.ejs')
+    res.render('employees.ejs',{employees})
 });
 app.get('/medic-elite/contact', (req, res) => {
     res.render('contact.ejs')
