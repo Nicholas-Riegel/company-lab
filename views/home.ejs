@@ -1,20 +1,23 @@
 <%- include('./partials/head') %>
 <%- include('./partials/nav') %>
 
-<h1>Home</h1>
-
-<img src="images/MEDIC Elite LOGO.jpg" alt="Medic Elite Logo">
-
-
-<% homeData.forEach(item => { %>
-    <h2><%= item.title %></h2>
-    <ul>
-        <% item.points.forEach(x => { %>
+<main class="home-wrapper">
+  <div class="home-container">
+    <div class="logo-container">
+      <img src="images/MEDIC Elite LOGO.jpg" alt="Medic Elite Logo">
+    </div>
+    <div class="content-container">
+      <!-- <h1>Home</h1> -->
+      <% homeData.forEach(item => { %>
+        <h2><%= item.title %></h2>
+        <ul>
+          <% item.points.forEach(x => { %>
             <li><strong><%= x.heading %></strong>: <%= x.text %></li>
-        <% }) %>
-    </ul>
-
-<% }) %>
-
+          <% }) %>
+        </ul>
+      <% }) %>
+    </div>
+  </div>
+</main>
 
 <%- include('./partials/footer') %>
