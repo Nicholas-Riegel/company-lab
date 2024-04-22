@@ -5,10 +5,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const employees = require('./employees.js');
-
+const homeData = require('./homeData.js')
 
 app.get('/medic-elite', (req, res) => {
-    res.render('home.ejs')
+    res.render('home.ejs', {homeData})
 });
 app.get('/medic-elite/history', (req, res) => {
     res.render('history.ejs')
