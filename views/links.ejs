@@ -1,6 +1,17 @@
 <%- include('./partials/head') %>
 <%- include('./partials/nav') %>
 
-<h1>Links</h1>
+<div id="links">
+    
+    <h1>Links</h1>
+    
+    <% linksData.forEach(item => { %>
+        <div>
+            <h2><a href="<%= item.url %>"><%= item.title %></a></h2>
+            <p><%= item.description %></p>
+        </div>
+    <% }) %>
+        
+</div>
 
 <%- include('./partials/footer') %>

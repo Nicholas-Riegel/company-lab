@@ -6,6 +6,7 @@ app.use(express.static('public'));
 
 const employees = require('./employees.js');
 const homeData = require('./homeData.js')
+const linksData = require('./linksData.js')
 
 app.get('/medic-elite', (req, res) => {
     res.render('home.ejs', {homeData})
@@ -23,7 +24,7 @@ app.get('/medic-elite/contact', (req, res) => {
     res.render('contact.ejs')
 });
 app.get('/medic-elite/links', (req, res) => {
-    res.render('links.ejs')
+    res.render('links.ejs', {linksData})
 });
 
 app.get('/medic-elite/employees/:employeeID', (req, res) => {

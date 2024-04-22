@@ -79,39 +79,6 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
-  /* Contact form  */
-
-#contact {
-  /* border: 1px solid black; */
-  margin: auto;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-#contact h1{
-  text-align: center;
-}
-
-#contact form > div {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#contact input, #contact textarea {
-  box-sizing: border-box;
-  width: 100%;
-}
-
-#contact button {
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#contact button:hover {
-  background-color: rgb(240, 111, 202);
-}
-
 .home-wrapper {
     display: flex;
     justify-content: center;
@@ -156,3 +123,52 @@ footer {
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
+
+/* Contact form  */
+
+#contact {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact h1{
+  text-align: center;
+}
+
+#contact form > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#contact input, #contact textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#contact button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#contact button:hover {
+  background-color: rgb(240, 111, 202);
+}
+
+/* Links  */
+
+#links {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#links h1{
+  text-align: center;
+}
+
+#links > div {
+  margin-bottom: 10px;
+}
