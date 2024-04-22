@@ -42,11 +42,11 @@ const homeData = [
         title: "Services and Capabilities",
         points: [
             {
-                heading: "Emergency Medical Response:",
+                heading: "Emergency Medical Response",
                 text: "MERTs are trained to handle trauma care, cybernetic repairs, and emergency surgery in the field."
             },
             {
-                heading: "Hostile Environment Operations:",
+                heading: "Hostile Environment Operations",
                 text: "They are capable of operating in areas with active conflict, hazardous materials, or extreme conditions."
             },
             {
@@ -57,7 +57,7 @@ const homeData = [
         ] 
     },
     {
-        title: "Ethical and Social Implications:",
+        title: "Ethical and Social Implications",
         points: [
             {
                 heading: "Public Perception",
