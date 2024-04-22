@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
-
 const employees = require('./employees.js');
+
+
+app.use(express.static('public'));
+
 
 app.get('/medic-elite', (req, res) => {
     res.render('home.ejs')
@@ -25,7 +28,8 @@ app.get('/medic-elite/links', (req, res) => {
 app.get('/medic-elite/employees/:employeeID', (req, res) => {
     const employee = employees.find(employee => employee.employeeID === req.params.employeeID);
     res.render('employee.ejs', { employee });
-  });
+});
+
 const port = 3000;
 
 app.listen(port, ()=>{
