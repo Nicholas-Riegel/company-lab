@@ -13,19 +13,12 @@ app.get('/medic-elite/work', (req, res) => {
 app.get('/medic-elite/employees', (req, res) => {
     res.render('employees.ejs')
 });
+app.get('/medic-elite/contact', (req, res) => {
+    res.render('contact.ejs')
+});
 app.get('/medic-elite/links', (req, res) => {
     res.render('links.ejs')
 });
-
-// app.get('/menu/:category', (req, res)=>{
-
-//     let category = req.params.category;
-//     const menuItems = RESTAURANT.menu.filter(x => x.category === category)
-//     category = category.charAt(0).toUpperCase() + category.slice(1)
-
-//     res.render('category.ejs', {menuItems, category})
-    
-// })
 
 const port = 3000;
 
