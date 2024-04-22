@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
 const employees = require('./employees.js');
+
 
 app.get('/medic-elite', (req, res) => {
     res.render('home.ejs')
@@ -26,7 +30,8 @@ app.get('/medic-elite/employees/:employeeID', (req, res) => {
     const employee = employees.find(employee => employee.employeeID === req.params.employeeID);
     res.render('employee.ejs', { employee });
   });
-const port = 3000;
+
+  const port = 3000;
 
 app.listen(port, ()=>{
     console.log(`App listening on port ${port}`);

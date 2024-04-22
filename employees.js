@@ -15,7 +15,7 @@ const employees = [
         age: 39,
         employeeID: "112358",
         email: "leon.zhao@medicelite.biz",
-        image: "images/leon-zhao.jpg",
+        image: 'images/leon-zhao.jpg',
     },
     {
         name: "Aria Torres",
