@@ -22,6 +22,10 @@ app.get('/medic-elite/links', (req, res) => {
     res.render('links.ejs')
 });
 
+app.get('/employees/:employeeID', (req, res) => {
+    const employee = employees.find(employee => employee.employeeID === parseInt(req.params.employeeID));
+    res.render('employee.ejs', { employee });
+  });
 const port = 3000;
 
 app.listen(port, ()=>{
