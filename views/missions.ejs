@@ -1,0 +1,22 @@
+<%- include('partials/head', { pageTitle: "Medic-Elite - Missions" }) %>
+<%- include('partials/nav') %>
+
+<main class="missions-wrapper">
+  <div class="missions-container">
+    <div id="missionLinks" class="mission-links">
+      <h2>Missions Briefings</h2>
+      <% missionBriefings.forEach(function(mission, index) { %>
+        <p>
+          <a href="#" data-index="<%= index %>" onclick="loadMissionDetails(this); return false;" class="mission-link">
+            Mission on <%= mission.date %>
+          </a>
+        </p>
+      <% }); %>
+    </div>
+    <div id="missionDetails" class="mission-details">
+      <p>Select a mission to view details.</p>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

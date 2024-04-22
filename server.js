@@ -5,34 +5,44 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const employees = require('./employees.js');
-const homeData = require('./homeData.js')
+const homeData = require('./homeData.js');
+const missionBriefings = require('./missionBriefings.js'); 
 
 app.get('/medic-elite', (req, res) => {
-    res.render('home.ejs', {homeData})
+    res.render('home', {homeData});
 });
+
 app.get('/medic-elite/history', (req, res) => {
-    res.render('history.ejs')
+    res.render('history');
 });
-app.get('/medic-elite/work', (req, res) => {
-    res.render('work.ejs')
+
+app.get('/medic-elite/missions', (req, res) => {
+    res.render('missions', { missionBriefings }); 
 });
+
+app.get('/medic-elite/missions-data', (req, res) => {
+    res.json(missionBriefings);
+  });
+
 app.get('/medic-elite/employees', (req, res) => {
-    res.render('employees.ejs',{employees})
+    res.render('employees', {employees});
 });
+
 app.get('/medic-elite/contact', (req, res) => {
-    res.render('contact.ejs')
+    res.render('contact');
 });
+
 app.get('/medic-elite/links', (req, res) => {
-    res.render('links.ejs')
+    res.render('links');
 });
 
 app.get('/medic-elite/employees/:employeeID', (req, res) => {
     const employee = employees.find(employee => employee.employeeID === req.params.employeeID);
-    res.render('employee.ejs', { employee });
-  });
+    res.render('employee', { employee });
+});
 
-  const port = 3000;
+const port = 3000;
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`App listening on port ${port}`);
-})
+});
