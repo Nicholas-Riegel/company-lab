@@ -6,7 +6,7 @@ const employees = [
         age: 45,
         employeeID: "178943",
         email: "samantha.burnell@medicelite.biz",
-        image: "images/samantha-burnell.jpg",
+        image: "/images/samantha-burnell.jpg",
     },
     {
         name: "Leon Zhao",
@@ -15,7 +15,7 @@ const employees = [
         age: 39,
         employeeID: "112358",
         email: "leon.zhao@medicelite.biz",
-        image: 'images/leon-zhao.jpg',
+        image: '/images/leon-zhao.jpg',
     },
     {
         name: "Aria Torres",
@@ -24,7 +24,7 @@ const employees = [
         age: 37,
         employeeID: "337215",
         email: "aria.torres@medicelite.biz",
-        image: "images/aria-torres.jpg",
+        image: "/images/aria-torres.jpg",
     },
     {
         name: "Mikaela Rhys",
@@ -33,7 +33,7 @@ const employees = [
         age: 29,
         employeeID: "654321",
         email: "mikaela.rhys@medicelite.biz",
-        image: "images/mikaela-rhys.jpg",
+        image: "/images/mikaela-rhys.jpg",
     },
     {
         name: "Jaxon Creed",
@@ -42,7 +42,7 @@ const employees = [
         age: 34,
         employeeID: "563780",
         email: "jaxon.creed@medicelite.biz",
-        image: "images/jaxon-creed.jpg",
+        image: "/images/jaxon-creed.jpg",
     },
     {
         name: "Tara Flint",
@@ -51,7 +51,7 @@ const employees = [
         age: 32,
         employeeID: "287654",
         email: "tara.flint@medicelite.biz",
-        image: "images/tara-flint.jpg",
+        image: "/images/tara-flint.jpg",
 
     },
     {
@@ -61,7 +61,7 @@ const employees = [
         age: 36,
         employeeID: "298501",
         email: "carlos.gomez@medicelite.biz",
-        image: "images/carlos-gomez.jpg",
+        image: "/images/carlos-gomez.jpg",
     },
     {
         name: "Elise Hwang",
@@ -70,7 +70,7 @@ const employees = [
         age: 28,
         employeeID: "234567",
         email: "elise.hwang@medicelite.biz",
-        image: "images/elise-hwang.jpg",
+        image: "/images/elise-hwang.jpg",
     },
     {
         name: "Ivan Petrov",
@@ -79,7 +79,7 @@ const employees = [
         age: 40,
         employeeID: "545678",
         email: "ivan.petrov@medicelite.biz",
-        image: "images/ivan-petrov.jpg",
+        image: "/images/ivan-petrov.jpg",
     },
 ];
 
