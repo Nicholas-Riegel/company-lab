@@ -1,53 +1,53 @@
-/* styles.css */
-/*Common Styles*/
+/* Common Styles */
 body,
 html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Arial", sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
+
 nav {
-    background-color: #2c3e50;
-    padding: 1em;
-    margin-bottom: 5px;
+  background-color: #2c3e50;
+  padding: 1em;
+  margin-bottom: 5px;
 }
 
 nav a {
-    color: white;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background-color: #3498db;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: #3498db;
+  border-radius: 3px;
+  transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2em;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
 }
 
-/*Home Styles*/
+/* Home Styles */
 .home-wrapper {
     display: flex;
     justify-content: center;
@@ -56,151 +56,160 @@ footer {
     padding: 20px;
     background-image: url("/images/boston2065.jpg");
     background-size: cover;
-}
-
-.home-container {
+  }
+  
+  .home-container {
     display: flex;
-    align-items: stretch;
+    flex-wrap: wrap;
     gap: 20px;
-}
-
-.logo-container {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logo-container,
+  .content-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+    align-content: center;
     padding: 20px;
+    border: 2px solid #1d1c1c;
     border-radius: 5px;
     background-color: lightgray;
-    border: 2px solid #1d1c1c;
-}
-
-.logo-container img {
-    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .logo-container img {
+    max-width: 100%;
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
-}
-
-.content-container {
-    flex: 0 1 auto;
-    max-width: 1000px;
-    padding: 20px;
-    border: 2px solid #1d1c1c;
-    border-radius: 5px;
-    background-color: lightgray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .home-container {
+      flex-wrap: nowrap;
+    }
+  
+    .logo-container {
+      flex: 0 0 800px;
+      order: 1;
+    }
+  
+    .content-container {
+      flex: 0 1 1000px;
+      order: 2;
+    }
+  }
 
 /* Contact Styles */
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 100px);
-    padding: 20px;
-    background-image: url("/images/boston2065.jpg");
-    background-size: cover;
-  }
-  
-  .content-container {
-    padding: 20px;
-    border: 2px solid #1d1c1c;
-    border-radius: 5px;
-    background-color: lightgray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    max-width: 600px;
-    width: 100%;
-    min-height: 500px;
-  }
-  
-  #contact {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #contact h1 {
-    text-align: center;
-  }
-  
-  #contact form > div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #contact input,
-  #contact textarea {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #contact textarea {
-    height: 150px; 
-  }
-  
-  #contact button {
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    align-self: flex-end;
-    margin-top: 10px;
-  }
-  
-  #contact button:hover {
-    background-color: #2980b9;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  background-image: url("/images/boston2065.jpg");
+  background-size: cover;
+}
+
+.content-container {
+  padding: 20px;
+  border: 2px solid #1d1c1c;
+  border-radius: 5px;
+  background-color: lightgray;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+  min-height: 500px;
+}
+
+#contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact h1 {
+  text-align: center;
+}
+
+#contact form > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#contact input,
+#contact textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact textarea {
+  height: 150px;
+}
+
+#contact button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+#contact button:hover {
+  background-color: #2980b9;
+}
 
 /* Links Styles */
 .links-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 100px);
-    padding: 20px;
-    background-image: url("/images/boston2065.jpg");
-    background-size: cover;
-  }
-  
-  .content-container {
-    padding: 20px;
-    border: 2px solid #1d1c1c;
-    border-radius: 5px;
-    background-color: lightgray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  #links {
-    width: 100%;
-  }
-  
-  #links h1 {
-    text-align: center;
-  }
-  
-  .link-item {
-    margin-bottom: 20px;
-  }
-  
-  #links a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  #links a:hover {
-    text-decoration: underline;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  background-image: url("/images/boston2065.jpg");
+  background-size: cover;
+}
 
-/*History Styles*/
+.content-container {
+  padding: 20px;
+  border: 2px solid #1d1c1c;
+  border-radius: 5px;
+  background-color: lightgray;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  width: 100%;
+}
+
+#links {
+  width: 100%;
+}
+
+#links h1 {
+  text-align: center;
+}
+
+.link-item {
+  margin-bottom: 20px;
+}
+
+#links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#links a:hover {
+  text-decoration: underline;
+}
+
+/* History Styles */
 .history-wrapper {
     display: flex;
     justify-content: center;
@@ -209,42 +218,57 @@ footer {
     padding: 20px;
     background-image: url("/images/boston2065.jpg");
     background-size: cover;
-}
-
-.history-container {
+  }
+  
+  .history-container {
     display: flex;
-    align-items: stretch;
+    flex-wrap: wrap;
     gap: 20px;
-}
-
-.text-content {
-    flex: 0 1 auto;
-    max-width: 1000px;
+    justify-content: center;
+    max-width: 1600px; 
+    margin: 0 auto;
+    padding: 20px; 
+  }
+  
+  .text-content,
+  .history-image-container {
+    flex: 1 1 100%;
+    max-width: 100%;
     padding: 20px;
     border: 2px solid #1d1c1c;
     border-radius: 5px;
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.history-image-container {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: lightgray;
-    border: 2px solid #1d1c1c;
-}
-
-.history-image-container img {
-    max-width: 800px;
+  }
+  
+  .history-image-container {
+    position: relative;
+  }
+  
+  .history-image-container img {
+    max-width: 100%;
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
-}
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .history-container {
+      flex-wrap: nowrap;
+    }
+  
+    .text-content {
+      flex: 1 1 auto; 
+      order: 1;
+      max-width: 800px; 
+    }
+  
+    .history-image-container {
+      flex: 0 0 600px; 
+      order: 2;
+    }
+  }
+
 /* Missions Styles */
 .missions-wrapper {
     display: flex;
@@ -254,18 +278,19 @@ footer {
     padding: 20px;
     background-image: url("/images/boston2065.jpg");
     background-size: cover;
-}
-
-.missions-container {
+  }
+  
+  .missions-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
     max-width: 1400px;
-}
-
-.mission-links {
-    flex: 0 0 30%;
-    min-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .mission-links,
+  .mission-details {
+    flex: 1 1 100%;
     min-height: 500px;
     padding: 20px;
     border: 2px solid #1d1c1c;
@@ -273,36 +298,46 @@ footer {
     background-color: lightgray;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     overflow-y: auto;
-}
-
-.mission-details {
-    flex: 1;
-    min-width: 600px;
-    min-height: 500px;
-    padding: 20px;
-    border: 2px solid #1d1c1c;
-    border-radius: 5px;
-    background-color: lightgray;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .mission-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.mission-details p {
+  }
+  
+  .mission-details p {
     text-align: center;
-}
-
-.mission-details img {
+  }
+  
+  .mission-details img {
     width: 100%;
     height: 600px;
     object-fit: cover;
     margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-/*Employee Styles*/
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .missions-container {
+      flex-wrap: nowrap;
+    }
+  
+    .mission-links {
+      flex: 0 0 300px;
+      order: 1;
+    }
+  
+    .mission-details {
+      flex: 1;
+      min-width: 600px;
+      order: 2;
+    }
+  }
+
+/* Employees Styles */
 .employees-wrapper {
     display: flex;
     justify-content: center;
@@ -315,16 +350,16 @@ footer {
   
   .employees-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
-    max-width: 2200px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
   }
   
   .employee-list,
-  .employee-details,
-  .hq-slideshow {
-    flex: 1;
-    min-width: 33%;
+  .employee-details {
+    flex: 1 1 100%;
     min-height: 1000px;
     padding: 20px;
     border: 2px solid #1d1c1c;
@@ -334,8 +369,7 @@ footer {
     overflow-y: auto;
   }
   
-  .employee-list h1,
-  .hq-slideshow h2 {
+  .employee-list h1 {
     text-align: center;
   }
   
@@ -373,8 +407,9 @@ footer {
   }
   
   .employee-info img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -409,37 +444,19 @@ footer {
     transform: translateY(-50%);
   }
   
-  .hq-slideshow {
-    position: relative;
-  }
+  @media screen and (min-width: 1024px) {
+    .employees-container {
+      flex-wrap: nowrap;
+    }
   
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+    .employee-list {
+      flex: 0 0 300px;
+      order: 1;
+    }
   
-  .slide.active {
-    opacity: 1;
-  }
-  
-  .slide img {
-    max-width: 90%;
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  }
-  
-  .slide h2 {
-    text-align: center;
-    margin-bottom: 10px;
+    .employee-details {
+      flex: 1 1 auto;
+      order: 2;
+      max-width: 1000px;
+    }
   }

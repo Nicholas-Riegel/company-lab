@@ -66,18 +66,25 @@ function loadEmployeeDetails(linkElement) {
 
 // Slideshow functionality
 window.onload = function () {
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
+  const slides = document.querySelectorAll(".history-image-container img");
+  const slideshowTitle = document.getElementById("slideshow-title");
+  const slideTitles = [
+    "Corporate Headquarters - Boston, MA",
+    "R & D 6th Floor",
+    "MERT Mobile Hospital",
+    "Medic Elite Call Center - 12th floor",
+  ];
   let currentSlide = 0;
 
   function showSlide(n) {
     slides.forEach((slide, index) => {
       if (index === n) {
-        slide.classList.add("active");
+        slide.style.display = "block";
       } else {
-        slide.classList.remove("active");
+        slide.style.display = "none";
       }
     });
+    slideshowTitle.textContent = slideTitles[n];
   }
 
   function nextSlide() {
