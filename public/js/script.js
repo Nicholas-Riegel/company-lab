@@ -93,5 +93,14 @@ window.onload = function () {
   }
 
   showSlide(currentSlide);
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 3000);
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarIcon = document.querySelector('.navbar-icon');
+  const navbarLinks = document.querySelector('.navbar-links');
+
+  navbarIcon.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+});
